@@ -1,0 +1,39 @@
+
+
+import React, { useState } from 'react'
+import {
+  SafeAreaView,
+  StyleSheet,
+  ScrollView,
+  View,
+  Text,
+  StatusBar,
+} from 'react-native';
+import DatePicker from 'react-native-date-picker'
+
+
+const App = (props) => {
+  const [date, setDate] = useState(new Date())
+  console.log('--->', this.props);
+  return (
+    <View style={styles.main}>
+      <Text>Ok i see!</Text>
+      <DatePicker
+        date={date}
+        mode="date"
+        // style={{color: 'green'}}
+        onDateChange={setDate}
+      />
+    </View>
+  );
+};
+
+const styles = StyleSheet.create({
+  main: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    flex: 1
+  }
+});
+
+export default App;
